@@ -1,6 +1,17 @@
+<table class="table tile">
+<thead>
+<tr>
+<th>Community Area Name</th>
+<th>Number of Vacant Properties</th>
+</tr>
+</thead>
+<tbody>
+
 <% @vacant_properties.each do |property| %>
-
-<p>Community Area ID: <%= property.community_area %></p>
-<p>Number of Vacant Properties: <%= property.number_of_vacant_properties %></p>
-
+<tr>
+<td><%= property["community_area_name"] %></td>
+<td><%= property["number_of_vacant_property"] %> </td>
+</tr>
 <% end %>
+
+</tbody>
