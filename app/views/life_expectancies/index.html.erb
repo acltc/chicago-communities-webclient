@@ -1,8 +1,21 @@
-<% @life_expectancy.each do |expect| %>
+<table class="Life Expectancies">
+<thead>
+<tr>
+<th>Community Area Name</th>
+<th>Life Expectancey (1990)</th>
+<th>Life Expectancey (2000)</th>
+<th>Life Expectancey (2010)</th>
+</tr>
+</thead>
+<tbody>
 
-<h2><%= expect.community_area_name %></h2>
-<p>Life Expectancy (1990): <%= expect.life_expectancy_1990 %></p>
-<p>Life Expectancy (2000): <%= expect.life_expectancy_2000 %></p>
-<p>Life Expectancy (2010): <%= expect.life_expectancy_2010 %></p>
-
+<% @life_expectancies.each do |life| %>
+<tr>
+<td><%= life["community_area_name"] %></td>
+<td><%= life["life_expectancy_1990"] %> </td>
+<td><%= life["life_expectancy_2000"] %> </td>
+<td><%= life["life_expectancy_2010"] %> </td>
+</tr>
 <% end %>
+
+</tbody>
