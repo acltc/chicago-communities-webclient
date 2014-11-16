@@ -8,15 +8,10 @@ class CommunitiesController < ApplicationController
 
 	def show
     	@community = Unirest.get("http://localhost:3001/communities/#{params[:id]}.json", 
-                  headers:{ "Accept" => "application/json" }).body	end
+                  headers:{ "Accept" => "application/json" }).body
     end
 
-=======
-  def test
 
-  end
- 
-=======
   def test
 
   end
