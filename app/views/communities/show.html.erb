@@ -1,7 +1,12 @@
-<h2><%= @community.name %></h2>
-<p>Games Played: <%= @community.games %></p>
-<p>Goals: <%= @community.goals %></p>
-<p>Assists: <%= @community.assists %></p>
-<p>Points: <%= @community.points %></p>
-<p>Corsi Rel: <%= @community.corsi_relative %></p>
-<p></p>
+<p>ID #<%= @community["id"] %></p>
+<p>Community Area #: #<%= @community["community_area"] %></p>
+<p>Community Area Name: <%= @community["community_area_name"] %></p>
+<p>Vacant Properties: <%= @community["vacant_properties"] %></p>
+<p>Percent of Crowded Housing: <%= @community["percent_of_housing_crowded"] %></p>
+<p>Percent of Households Below Poverty Line: <%= @community["percent_of_households_below_poverty"] %></p>
+<p>Percent Over 16 Years Old: <%= @community["percent_over_16_unemployed"] %></p>
+<p>Percent Over 25 Without HighSchool Diploma: <%= @community["percent_over_25_without_HS_diploma"] %></p>
+<p>Percent Over 18 or under 65: <%= @community["percent_under_18_over_64"] %></p>
+<p>Per Capita Income Average: <%= @community["per_capita_income"] %></p>
+<p>Hardship Index: <%= @community["hardship_index"] %></p>
+
