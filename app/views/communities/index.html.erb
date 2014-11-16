@@ -1,10 +1,6 @@
 <% @communities.each do |community| %>
 
-<h2><%= community.name %></h2>
-<p>Games Played: <%= community.games %></p>
-<p>Goals: <%= community.super_good %></p>
-<p>Assists: <%= community.assists %></p>
-<p>Points: <%= community.points %></p>
-<p>Corsi Rel: <%= community.corsi_relative %></p>
+<h2>Area ID: <%= community.community_area %></h2>
+<p>Area Name: <%= community.community_area_name %></p>
 
 <% end %>

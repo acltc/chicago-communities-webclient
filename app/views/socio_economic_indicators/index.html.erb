@@ -1,10 +1,12 @@
 <% @socio_economic_indicator.each do |indicator| %>
 
-<h2><%= indicator.name %></h2>
-<p>Games Played: <%= indicator.games %></p>
-<p>Goals: <%= indicator.super_good %></p>
-<p>Assists: <%= indicator.assists %></p>
-<p>Points: <%= indicator.points %></p>
-<p>Corsi Rel: <%= indicator.corsi_relative %></p>
+<h2><%= indicator.community_area_name %></h2>
+<p>Games Played: <%= indicator.percent_of_housing_crowded %></p>
+<p>Goals: <%= indicator.percent_households_below_poverty %></p>
+<p>Assists: <%= indicator.percent_over_16_unemployed %></p>
+<p>Points: <%= indicator.percent_over_25_without_HS_diploma %></p>
+<p>Corsi Rel: <%= indicator.percent_under_18_over_64 %></p>
+<p>Corsi Rel: <%= indicator.per_capita_income %></p>
+<p>Corsi Rel: <%= indicator.hardship_index %></p>
 
 <% end %>
