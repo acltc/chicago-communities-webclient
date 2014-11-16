@@ -1,8 +1,6 @@
 class CommunitiesController < ApplicationController
 
 	def index
-    	@communities = Community.all
-
 		@communities = Unirest.get("http://localhost:3000/communities.json").body
 	end
 
