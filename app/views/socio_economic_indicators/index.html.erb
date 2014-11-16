@@ -1,12 +1,28 @@
-<% @socio_economic_indicator.each do |indicator| %>
-
-<h2><%= indicator.community_area_name %></h2>
-<p>Games Played: <%= indicator.percent_of_housing_crowded %></p>
-<p>Goals: <%= indicator.percent_households_below_poverty %></p>
-<p>Assists: <%= indicator.percent_over_16_unemployed %></p>
-<p>Points: <%= indicator.percent_over_25_without_HS_diploma %></p>
-<p>Corsi Rel: <%= indicator.percent_under_18_over_64 %></p>
-<p>Corsi Rel: <%= indicator.per_capita_income %></p>
-<p>Corsi Rel: <%= indicator.hardship_index %></p>
-
-<% end %>
+<table class="table tile">
+  <thead>
+    <tr>
+      <th>Community Area Name</th>
+      <th>Percent of Housing Crowded</th>
+      <th>Percent of Households Below Poverty</th>
+      <th>Percent of Aged 16+ Unemployed</th>
+      <th>Percent Aged 25+ Without High School Diploma</th>
+      <th>Percent aged under 18 and over 64</th>
+      <th>Per Capita Income</th>
+      <th>Hardship Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @socio_economic_indicators.each do |indicator| %>
+      <tr>
+        <td><%= indicator["community_area_name"] %></td>
+        <td><%= indicator["percent_of_housing_crowded"] %></td>
+        <td><%= indicator["percent_households_below_poverty"] %></td>
+        <td><%= indicator["percent_over_16_unemployed"] %></td>
+        <td><%= indicator["percent_over_25_without_HS_diploma"] %></td>
+        <td><%= indicator["percent_under_18_over_64"] %></td>
+        <td><%= indicator["per_capita_income"] %></td>
+        <td><%= indicator["hardship_index"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
