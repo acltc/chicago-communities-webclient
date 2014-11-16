@@ -1,6 +1,40 @@
+
+<div class="table-responsive overflow" tabindex="5001" style="overflow: hidden; outline: none;">
+      <table class="table tile">
+          <thead>
+              <tr>
+                  <th>Area ID: </th>
+                  <th>Area Name: </th>
+                  <th>Vacant Properties: </th>
+                  <th>% Of housing crowded: </th>
+                  <th>% Of households below poverty: </th>
+                  <th>% Over 16 un-employed: </th>
+                  <th>% Over 25 w/out HS diploma: </th>
+                  <th>% Under 18 and over 64: </th>
+                  <th>% Per Capita Income: </th>
+                  <th>% Hardship Index: </th>                  
+              </tr>
+          </thead>
+          <tbody>
 <% @communities.each do |community| %>
+              <tr>
+                  <td><%= community["community_area"] %></td>
+                  <td><%= community["community_area_name"] %> </td>
+                  <td><%= community["vacant_properties"] %> </td>
+                  <td><%= community["percent_of_housing_crowded"] %> </td>
+                  <td><%= community["percent_of_households_below_poverty"] %> </td>
+                  <td><%= community["percent_over_16_unemployed"] %> </td>
+                  <td><%= community["percent_over_25_without_HS_diploma"] %> </td>
+                  <td><%= community["percent_under_18_over_64"] %> </td>
+                  <td><%= community["per_capita_income"] %> </td>
+                  <td><%= community["hardship_index"] %> </td>
+                  
+              </tr>
+<% end %>  
+             
+          </tbody>
+      </table>
+  </div>
 
-<h2>Area ID: <%= community.community_area %></h2>
-<p>Area Name: <%= community.community_area_name %></p>
 
-<% end %>
+

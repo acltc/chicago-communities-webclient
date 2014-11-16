@@ -1,13 +1,11 @@
 class CommunitiesController < ApplicationController
 
 	def index
-    	@communities = Community.all
-
-		@communities = Unirest.get("http://localhost:3001/communities.json").body
+		@communities = Unirest.get("http://localhost:3000/communities.json").body
 	end
 
 	def show
-    	@community = Unirest.get("http://localhost:3001/communities/#{params[:id]}.json", 
+    	@community = Unirest.get("http://localhost:3000/communities/#{params[:id]}.json", 
                   headers:{ "Accept" => "application/json" }).body
     end
 
