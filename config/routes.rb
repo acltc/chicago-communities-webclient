@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
   resources :communities
+  resources :life_expectancies
+  resources :socio_economic_indicators
+  resources :vacant_properties
+
 
   root 'communities#test'
 

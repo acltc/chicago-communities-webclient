@@ -1,10 +1,8 @@
 <% @life_expectancy.each do |expect| %>
 
-<h2><%= expect.name %></h2>
-<p>Games Played: <%= expect.games %></p>
-<p>Goals: <%= expect.super_good %></p>
-<p>Assists: <%= expect.assists %></p>
-<p>Points: <%= expect.points %></p>
-<p>Corsi Rel: <%= expect.corsi_relative %></p>
+<h2><%= expect.community_area_name %></h2>
+<p>Life Expectancy (1990): <%= expect.life_expectancy_1990 %></p>
+<p>Life Expectancy (2000): <%= expect.life_expectancy_2000 %></p>
+<p>Life Expectancy (2010): <%= expect.life_expectancy_2010 %></p>
 
 <% end %>
