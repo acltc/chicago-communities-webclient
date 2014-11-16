@@ -1,10 +1,8 @@
 class LifeExpectanciesController < ApplicationController
 
 	def index
-    	@life_expectancies = LifeExpectancy.all
-
-		puts "DEBUGGING MODE:"
-		puts @life_expectancies
+    	@life_expectancies = Unirest.get("http://localhost:3000/life_expectancies.json").body
+		
 	end
 
 	def show
