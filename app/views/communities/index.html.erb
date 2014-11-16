@@ -1,6 +1,17 @@
+<table class="table tile">
+<thead>
+<tr>
+<th>Community Area ID</th>
+<th>Community Area Name</th>
+</tr>
+</thead>
+<tbody>
+
 <% @communities.each do |community| %>
-
-<h2>Area ID: <%= community.community_area %></h2>
-<p>Area Name: <%= community.community_area_name %></p>
-
+<tr>
+<td><%= community["community_area"] %></td>
+<td><%= community["community_area_name"] %></td>
+</tr>
 <% end %>
+
+</tbody>
