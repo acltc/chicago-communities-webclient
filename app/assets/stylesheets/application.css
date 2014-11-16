@@ -10,6 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require theme/bootstrap.min
+ *= require theme/animate.min
+ *= require theme/calendar
+ *= require theme/editor
+ *= require theme/file-manager
+ *= require theme/font-awesome.min
+ *= require theme/form
+ *= require theme/generics
+ *= require theme/icons
+ *= require theme/lightbox
+ *= require theme/media-player
+ *= require theme/photo-gallery
+ *= require theme/style
  *= require_tree .
  *= require_self
  */
