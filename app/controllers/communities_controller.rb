@@ -1,5 +1,4 @@
 class CommunitiesController < ApplicationController
-<<<<<<< HEAD
 
 	def index
     	@communities = Community.all
@@ -20,5 +19,10 @@ class CommunitiesController < ApplicationController
   def test
 
   end
->>>>>>> d671cfb6b4e9b67965d3b912683d6ced2937bcda
+ 
+=======
+  def test
+
+  end
+
 end
