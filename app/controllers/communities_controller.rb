@@ -11,12 +11,10 @@ class CommunitiesController < ApplicationController
                   headers:{ "Accept" => "application/json" }).body	end
     end
 
-=======
   def test
 
   end
  
-=======
   def test
 
   end
