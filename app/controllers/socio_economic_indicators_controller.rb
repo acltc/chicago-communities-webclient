@@ -1,18 +1,11 @@
 class SocioEconomicIndicatorsController < ApplicationController
 
 	def index
-    	@socio_economic_indicators = SocioEconomicIndicator.all
+    	@vacant_properties = VacantProperty.all
 
-		puts "DEBUGGING MODE:"
-		puts @socio_economic_indicators
-	end
+		@vacant_properties = Unirest.get("http://localhost:3001/socio_economic_indicators.json").body
 
-	def show
-		# .body makes it a ruby hash, so we can more easily work with it elsewhere (like in view)
-    	@socio_economic_indicators = SocioEconomicIndicator.find(params[:id])
-		# printing debugging console statements
-		puts "DEBUGGING"
-		puts @socio_economic_indicators
+		redirect_to vacant_property_path(@blackhawk["id"])
 	end
 
 end
