@@ -19,7 +19,7 @@
 <% @communities.each do |community| %>
               <tr>
                   <td><%= community["community_area"] %></td>
-                  <td><%= community["community_area_name"] %> </td>
+                  <td><a href="/communities/<%= community["community_area"] %>"><%= community["community_area_name"] %></a></td>
                   <td><%= community["vacant_properties"] %> </td>
                   <td><%= community["percent_of_housing_crowded"] %> </td>
                   <td><%= community["percent_of_households_below_poverty"] %> </td>
