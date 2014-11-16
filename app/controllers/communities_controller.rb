@@ -15,12 +15,10 @@ class CommunitiesController < ApplicationController
 		puts @community
 	end
 
-=======
   def test
 
   end
  
-=======
   def test
 
   end
