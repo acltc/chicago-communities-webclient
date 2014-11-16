@@ -3,17 +3,13 @@ class CommunitiesController < ApplicationController
 	def index
     	@communities = Community.all
 
-		puts "DEBUGGING MODE:"
-		puts @communities
+		@communities = Unirest.get("http://localhost:3001/communities.json").body
 	end
 
 	def show
-		# .body makes it a ruby hash, so we can more easily work with it elsewhere (like in view)
-    	@communities = Community.find(params[:id])
-		# printing debugging console statements
-		puts "DEBUGGING"
-		puts @community
-	end
+    	@community = Unirest.get("http://localhost:3001/communities/#{params[:id]}.json", 
+                  headers:{ "Accept" => "application/json" }).body	end
+    end
 
 =======
   def test
