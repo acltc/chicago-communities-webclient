@@ -1,0 +1,10 @@
+<% @socio_economic_indicator.each do |indicator| %>
+
+<h2><%= indicator.name %></h2>
+<p>Games Played: <%= indicator.games %></p>
+<p>Goals: <%= indicator.super_good %></p>
+<p>Assists: <%= indicator.assists %></p>
+<p>Points: <%= indicator.points %></p>
+<p>Corsi Rel: <%= indicator.corsi_relative %></p>
+
+<% end %>

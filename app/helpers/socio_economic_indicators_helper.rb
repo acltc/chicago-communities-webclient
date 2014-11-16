@@ -1,0 +1,2 @@
+module SocioEconomicIndicatorsHelper
+end

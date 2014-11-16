@@ -1,0 +1,10 @@
+<% @vacant_properties.each do |property| %>
+
+<h2><%= property.name %></h2>
+<p>Games Played: <%= property.games %></p>
+<p>Goals: <%= property.super_good %></p>
+<p>Assists: <%= property.assists %></p>
+<p>Points: <%= property.points %></p>
+<p>Corsi Rel: <%= property.corsi_relative %></p>
+
+<% end %>
