@@ -10,3 +10,37 @@
 <p>Per Capita Income Average: <%= @community["per_capita_income"] %></p>
 <p>Hardship Index: <%= @community["hardship_index"] %></p>
 
+<div id="chart-container" style="width:100%; height:400px;"></div>
+<script>
+$(function () {
+    $('#chart-container').highcharts({
+        title: {
+            text: '<%= @community["community_area_name"] %> Life Expectancy',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['1990', '2000', '2010']
+        },
+        yAxis: {
+            title: {
+                text: 'Age'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '<%= @community["community_area_name"] %>',
+            data: [<%= @community["life_expectancy_1990"] %>, <%= @community["life_expectancy_2000"] %>, <%= @community["life_expectancy_2010"] %>]
+        }]
+    });
+});
+</script>
